@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+.container {
+  margin: auto;
+  width: 960px;
+  text-align: center;
+}
+
+.intro {
+  text-align: left;
+}
+
+/* panel */
+.panel {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /*background-color: #83AF9B;*/
+  background-color: #f9cdad;
+  /*color: #f4f4f4;*/
+  color: #7d7d7d;
+}
+
+.panel-header {
+  margin: 15px 5px 5px 5px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.panel-body {
+  margin: 5px 5px 15px 5px;
+  text-align: center;
+}
+
+/* button */
+button {
+  font-size: 27px;
+  width: 3em;
+}
+
+button:focus {
+  outline: none
+}
+
+button.press {
+  color: #fff;
+  background-color: #83AF9B;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #547980;
+}
+
+button.press:hover,
+button.press.hover {
+  background-color: #83AF9B
+}
+
+button.press:active,
+button.press.active {
+  background-color: #83AF9B;
+  box-shadow: 0 3px #547980;
+  transform: translateY(2px);
+}
+
+button.press.disabled {
+  background-color: #c2c2c2 !important;
+  box-shadow: 0 3px #7d7d7d !important;
+}
+
+
+#counters {
+  display: flex;
+  flex-direction: row;
+}
+
+#counters > div {
+  margin: 30px;
+}
+
+/* vuejs related */
+.vue-counter {
+  text-align: center;
+}
+
+
+/* d3 line chart */
+#d3-counter {
+  margin: auto;
+  width: 800px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
