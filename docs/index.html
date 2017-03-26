@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Build library/framework free Applications</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <div><h1>Build framework/library independent application</h1></div>
+    <div class="intro">
+      <p>In software engineering point of view, to build an application, you need to design it first, and pick the right library to make implementation easier. Unfortunately, it is not the case in javascript world. Nowadays, most of the application start from a framework/library, and think of how to implement the application with the specific framework/library. Lots of tutorials/boilerplate projects teach you how to code with a specific framework/library. With this approach, your code is tightly binded to a special framework.</p>
+      <p>In this demo app, I will show you that a few lines of code can help you make your application independent to the framework/library.</p>
+      <p>For example: this simple counter app, is implemented with 5 different frameworks/libraries (vanillar javascript, react, angular2, vue.js, and d3), and they share the same application logic and state. It makes you easily write reusable, framework/library-independent code, so that you can easily change the underlying implementation from one library to another to adapt to your business needs.</p>
+    </div>
+    <div id="counters">
+      <div class="panel">
+        <div class="panel-header">Vanilla</div>
+        <div id="vanilla-counter" class="panel-body"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">React</div>
+        <div id="react-counter" class="panel-body"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">Angular</div>
+        <div id="angular-counter" class="panel-body"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">Vue.js</div>
+        <div id="vue-counter" class="panel-body">
+        </div>
+      </div>
+    </div>
+    <svg id="d3-counter"></svg>
+  </div>
+
+  <script src="js/bundle.js"></script>
+</body>
+</html>
