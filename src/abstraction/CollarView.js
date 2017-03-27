@@ -60,7 +60,7 @@ class CollarView extends View {
     this.sensor.send(msg, false);
   }
 
-  addMsgHandler(actionType, handler) {
+  addActionHandler(actionType, handler) {
     this.sensor
       .when(`${actionType}`, s => s.get('actionType') === actionType)
       .do(`handle msg ${actionType}`, s => {

@@ -17,7 +17,7 @@ class View {
   }
 
   /* add msg handler to handle actions */
-  addMsgHandler(actionType, handler) {
+  addActionHandler(actionType, handler) {
   }
 }
 

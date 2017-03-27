@@ -8,8 +8,8 @@ class SimpleStore extends Store {
     this.handlers = new Map();
   }
 
-  dispatch(msg) {
-    let actionType = msg.actionType;
+  dispatch(action) {
+    let actionType = action.actionType;
 
     if (!this.handlers.has(actionType)) {
       return;
@@ -18,7 +18,7 @@ class SimpleStore extends Store {
     let handlers = this.handlers.get(actionType);
 
     handlers.forEach((handler) => {
-      handler.call(this, msg);
+      handler.call(this, action);
     });
 
     let views = this.views.values();
@@ -34,11 +34,16 @@ class SimpleStore extends Store {
 
     let views = this.views.values();
     for (let view of views) {
-      view.addMsgHandler(actionType, (msg) => {
+      view.addActionHandler(actionType, (msg) => {
         this.dispatch(msg)
       });
     }
+  }
 
+  reduce(actionType, reducer) {
+    this.handleAction(actionType, (action) => {
+      this.state = reducer(this.state, action);
+    });
   }
 
   registerView(name, view) {

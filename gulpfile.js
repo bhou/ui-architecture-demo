@@ -9,6 +9,8 @@ gulp.task('webpack', function() {
     .pipe(webpack({
       entry: {
         bundle: './src/index.js',
+        step1: './src/step1.js',
+        step2: './src/step2.js',
       },
       output: {
         filename: '[name].js',
@@ -38,7 +40,7 @@ gulp.task('webpack', function() {
         },
       },
     }))
-    .pipe(uglify({ mangle: { toplevel: true }}))
+    //.pipe(uglify({ mangle: { toplevel: true }}))
     .pipe(gulp.dest('public/js/'))
     .pipe(browserSync.stream());
 });
