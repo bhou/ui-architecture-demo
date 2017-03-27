@@ -40,7 +40,7 @@ gulp.task('webpack', function() {
         },
       },
     }))
-    //.pipe(uglify({ mangle: { toplevel: true }}))
+    .pipe(uglify({ mangle: { toplevel: true }}))
     .pipe(gulp.dest('public/js/'))
     .pipe(browserSync.stream());
 });
