@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
+  <title>Build library/framework free Applications</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
@@ -19,9 +19,7 @@
   <div class="container">
     <div><h1>Build framework/library independent application</h1></div>
     <div class="intro">
-      <p>In software engineering point of view, to build an application, you need to design it first, and pick the right library to make implementation easier. Unfortunately, it is not the case in javascript world. Nowadays, most of the application start from a framework/library, and think of how to implement the application with the specific framework/library. Lots of tutorials/boilerplate projects teach you how to code with a specific framework/library. With this approach, your code is tightly binded to a special framework.</p>
-      <p>In this demo app, I will show you that a few lines of code can help you make your application independent to the framework/library.</p>
-      <p>For example: this simple counter app, is implemented with 5 different frameworks/libraries (vanillar javascript, react, angular2, vue.js, and d3), and they share the same application logic and state. It makes you easily write reusable, framework/library-independent code, so that you can easily change the underlying implementation from one library to another to adapt to your business needs.</p>
+      <p><h3>Demo</h3></p>
     </div>
     <div id="counters">
       <div class="panel">
@@ -43,6 +41,29 @@
       </div>
     </div>
     <svg id="d3-counter"></svg>
+    <div class="intro">
+      <p><h3>About this demo</h3></p>
+
+      <p>Nowadays, most of the application start from a framework/library, and think of how to implement the application with the specific framework/library. Lots of tutorials/boilerplate projects teach you how to code with a specific framework/library. With this approach, your code is tightly binded to a special framework.</p>
+      <p>In this demo app, I will show you that a few lines of code (≈160) can help you make your application independent to the framework/library.</p>
+      <p>For example: this simple counter app, is implemented with 5 different ways/frameworks/libraries (vanillar javascript, react, angular2, vue.js, and d3), and they share the same application logic and state. It makes you easily write reusable, framework/library-independent code, so that you can easily change the underlying implementation from one library to another to adapt to your business needs.</p>
+
+      <p>source code: <a href="https://github.com/bhou/ui-architecture-demo">https://github.com/bhou/ui-architecture-demo</a></p>
+      <p><h3>Visualize the data flow</h3></p>
+      <p>You can see the architecture and data flow of this application in <a href="http://collarjs.com">collar.js dev server</a>:</p>
+    
+      <p>
+      <code><pre>
+# install collar dev server
+sudo npm install collar-dev-server
+
+# run it
+collar-dev-server
+      </pre></code>
+      </p>
+      <p>open <a href="http://localhost:7500">http://localhost:7500</a>, refresh this page, and check <a href="http://localhost:7500">http://localhost:7500</a></p>
+    </div>
+    <div class="footer" style="height: 50px;"></div>
   </div>
 
   <script src="js/bundle.js"></script>
